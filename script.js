@@ -291,13 +291,23 @@ function draw() {
     return;
   }
 
-  const gameList = games[time];
+  let gameList = [];
+
+  if (time === 'all') {
+    // 把全部遊戲合併起來
+    for (const key in games) {
+      gameList = gameList.concat(games[key]);
+    }
+  } else {
+    gameList = games[time];
+  }
+
   const game = gameList[Math.floor(Math.random() * gameList.length)];
 
   let text = `抽到：${game.name}`;
   if (game.players && game.players.toLowerCase() !== 'nan') {
-  text += ` <br>適合人數：${game.players}`;
-}
+    text += ` <br>適合人數：${game.players}`;
+  }
 
   resultDiv.innerHTML = text;
 }
