@@ -30,15 +30,15 @@ const games = {
     },
     {
       "name": "卡卡頌新版",
-      "players": "2019-02-06 00:00:00"
+      "players": "nan"
     },
     {
       "name": "阿瓦隆可愛版",
-      "players": "2019-05-10 00:00:00"
+      "players": "nan"
     },
     {
       "name": "亞瑟傳奇",
-      "players": "2022-04-10 00:00:00"
+      "players": "nan"
     },
     {
       "name": "恐怖村",
@@ -54,7 +54,7 @@ const games = {
     },
     {
       "name": "惡魔島",
-      "players": "2019-03-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "多米諾王國",
@@ -62,7 +62,7 @@ const games = {
     },
     {
       "name": "花磚物語",
-      "players": "2019-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "花磚物語2",
@@ -74,7 +74,7 @@ const games = {
     },
     {
       "name": "哆寶",
-      "players": "2020-02-08 00:00:00"
+      "players": "nan"
     },
     {
       "name": "獨家暗語",
@@ -90,7 +90,7 @@ const games = {
     },
     {
       "name": "魔語地城",
-      "players": "2022-04-08 00:00:00"
+      "players": "nan"
     },
     {
       "name": "欲罷不能",
