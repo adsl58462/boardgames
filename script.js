@@ -102,25 +102,25 @@ const games = {
     },
     {
       "name": "驚爆倫敦",
-      "players": "2022-04-08 00:00:00"
+      "players": "nan"
     },
     {
       "name": "量化寬鬆",
-      "players": "2022-03-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "閃靈快手",
-      "players": "2022-02-08 00:00:00"
+      "players": "nan"
     }
   ],
   "45min~90min": [
     {
       "name": "拉密Rummikub",
-      "players": "2019-02-04 00:00:00"
+      "players": "nan"
     },
     {
-      "name": "璀璨寶石 x3",
-      "players": "2019-02-04 00:00:00"
+      "name": "璀璨寶石",
+      "players": "nan"
     },
     {
       "name": "山中小屋擴充",
@@ -128,7 +128,7 @@ const games = {
     },
     {
       "name": "王牌檢察官",
-      "players": "2022-02-06 00:00:00"
+      "players": "nan"
     },
     {
       "name": "七大奇蹟-對決及擴充",
@@ -140,11 +140,11 @@ const games = {
     },
     {
       "name": "拯救北極熊",
-      "players": "2019-03-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "職場地下城",
-      "players": "2019-03-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "骰子馬戲團",
@@ -152,19 +152,19 @@ const games = {
     },
     {
       "name": "卡卡頌bigbox",
-      "players": "2019-02-06 00:00:00"
+      "players": "nan"
     },
     {
       "name": "瑪利歐地產大亨",
-      "players": "2019-03-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "璀燦寶石之城市擴充",
-      "players": "2019-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "奶油還是派",
-      "players": "2020-02-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "律師大爆炸",
@@ -172,31 +172,31 @@ const games = {
     },
     {
       "name": "綿羊爭牧場",
-      "players": "2020-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "動物朋友",
-      "players": "2020-03-06 00:00:00"
+      "players": "nan"
     },
     {
       "name": "奇思謬想",
-      "players": "2020-02-12 00:00:00"
+      "players": "nan"
     },
     {
       "name": "賭命大賽",
-      "players": "5人"
+      "players": "5"
     },
     {
       "name": "妙探尋兇（辛普森家族版）",
-      "players": "6人"
+      "players": "6"
     },
     {
       "name": "衝向黃金城",
-      "players": "2-4人"
+      "players": "2-4"
     },
     {
       "name": "熊熊公園",
-      "players": "2022-02-04 00:00:00"
+      "players": "nan"
     }
   ],
   ">  90min": [
@@ -206,7 +206,7 @@ const games = {
     },
     {
       "name": "大五月花號",
-      "players": "2019-03-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "商人擴充等",
@@ -222,7 +222,7 @@ const games = {
     },
     {
       "name": "高雄大空襲",
-      "players": "2021-02-06 00:00:00"
+      "players": "nan"
     },
     {
       "name": "光明城市",
@@ -230,47 +230,47 @@ const games = {
     },
     {
       "name": "馬約利卡",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "超級犀牛",
-      "players": "2025-02-06 00:00:00"
+      "players": "nan"
     },
     {
       "name": "猜心俱樂部",
-      "players": "2025-03-08 00:00:00"
+      "players": "nan"
     },
     {
       "name": "首都華沙",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "蜜蜂花園",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "青青珊瑚島",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "漢薩同盟",
-      "players": "2025-02-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "數字九層塔",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "四季之森",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     },
     {
       "name": "最後的星期五",
-      "players": "2025-02-05 00:00:00"
+      "players": "nan"
     },
     {
       "name": "天際線3000",
-      "players": "2025-02-04 00:00:00"
+      "players": "nan"
     }
   ],
   "nan": [
@@ -295,9 +295,9 @@ function draw() {
   const game = gameList[Math.floor(Math.random() * gameList.length)];
 
   let text = `抽到：${game.name}`;
-  if (game.players) {
-    text += ` <br>適合人數：${game.players}`;
-  }
+  if (game.players && game.players.toLowerCase() !== 'nan') {
+  text += ` <br>適合人數：${game.players}`;
+}
 
   resultDiv.innerHTML = text;
 }
