@@ -312,7 +312,6 @@ function draw() {
   let gameList = [];
 
   if (time === 'all') {
-    // 把全部遊戲合併起來
     for (const key in games) {
       gameList = gameList.concat(games[key]);
     }
@@ -320,12 +319,25 @@ function draw() {
     gameList = games[time];
   }
 
-  const game = gameList[Math.floor(Math.random() * gameList.length)];
+  let count = 0;
+  const maxCount = 20;  // 跳動次數
+  const intervalTime = 100;  // 每次間隔(ms)
 
-  let text = `抽到：${game.name}`;
-  if (game.players && game.players.toLowerCase() !== 'nan') {
-    text += ` <br>適合人數：${game.players}`;
-  }
+  const interval = setInterval(() => {
+    const randomGame = gameList[Math.floor(Math.random() * gameList.length)];
+    resultDiv.innerHTML = `抽籤中：${randomGame.name}`;
+    resultDiv.classList.remove('vibrate', 'show-result');  // 清除特效
+    count++;
 
-  resultDiv.innerHTML = text;
+    if (count >= maxCount) {
+      clearInterval(interval);
+      const finalGame = gameList[Math.floor(Math.random() * gameList.length)];
+      let text = `抽到：${finalGame.name}`;
+      if (finalGame.players && finalGame.players.toLowerCase() !== 'nan') {
+        text += ` <br>適合人數：${finalGame.players}`;
+      }
+      resultDiv.innerHTML = text;
+      resultDiv.classList.add('vibrate', 'show-result');
+    }
+  }, intervalTime);
 }
