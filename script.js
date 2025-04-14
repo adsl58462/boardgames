@@ -194,6 +194,18 @@ const games = {
       "name": "衝向黃金城",
       "players": "2-4"
     },
+     {
+      "name": "農家樂",
+      "players": "1-4"
+    },
+    {
+      "name": "殖民火星",
+      "players": "1-5"
+    },
+    {
+      "name": "聖母院",
+      "players": "2-5"
+    },
     {
       "name": "熊熊公園",
       "players": "nan"
@@ -269,16 +281,22 @@ const games = {
       "players": "nan"
     },
     {
+      "name": "工業革命伯明罕",
+      "players": "2-4"
+    },
+    {
+      "name": "冷戰熱鬥",
+      "players": "2"
+    },
+    {
+      "name": "安納克冒險",
+      "players": "1-4"
+    },
+    {
       "name": "天際線3000",
       "players": "nan"
     }
   ],
-  "nan": [
-    {
-      "name": "娃娃",
-      "players": "nan"
-    }
-  ]
 };
 
 
