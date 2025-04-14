@@ -330,14 +330,20 @@ function draw() {
     count++;
 
     if (count >= maxCount) {
-      clearInterval(interval);
-      const finalGame = gameList[Math.floor(Math.random() * gameList.length)];
-      let text = `抽到：${finalGame.name}`;
-      if (finalGame.players && finalGame.players.toLowerCase() !== 'nan') {
-        text += ` <br>適合人數：${finalGame.players}`;
-      }
-      resultDiv.innerHTML = text;
-      resultDiv.classList.add('vibrate', 'show-result');
+  clearInterval(interval);
+  const finalGame = gameList[Math.floor(Math.random() * gameList.length)];
+  let text = `抽到：${finalGame.name}`;
+  if (finalGame.players && finalGame.players.toLowerCase() !== 'nan') {
+    text += ` <br>適合人數：${finalGame.players}`;
+  }
+
+  resultDiv.innerHTML = text;
+  resultDiv.classList.add('vibrate', 'show-result');
+
+  // 3秒後移除震動效果
+  setTimeout(() => {
+    resultDiv.classList.remove('vibrate');
+  }, 3000);
     }
   }, intervalTime);
 }
