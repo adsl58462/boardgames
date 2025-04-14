@@ -343,7 +343,7 @@ function draw() {
   // 3秒後移除震動效果
   setTimeout(() => {
     resultDiv.classList.remove('vibrate');
-  }, 3000);
+  }, 2000);
     }
   }, intervalTime);
 }
